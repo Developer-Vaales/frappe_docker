@@ -49,6 +49,9 @@ services:
   frontend:
     <<: *customizable_image
     platform: linux/amd64
+    # ADD THIS LABELS SECTION
+    labels:
+      - "coolify.fqdn=https://erp.codexpen.com"
     command:
       - nginx-entrypoint.sh
     environment:
